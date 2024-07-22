@@ -1,7 +1,13 @@
 À la découverte de Django
 =========================
 
-# Information pour la présentation
+Ce projet a été créé pour la présentation intitulée **Développer un site web ou solution métier avec Django : introduction**,
+réalisée le mercredi 24 juillet 2024.
+
+- 🔗 Lien vers l'évènement et les inscriptions : [Django Rennes art, Bashville swing](https://www.meetup.com/python-rennes/events/302163922/)
+- 🔗 Lien vers le groupe de la communauté : [Meetup Python Rennes](https://www.meetup.com/python-rennes/)
+
+# Informations pour la présentation
 - Quentin Caron : Technical Lead chez Néosoft Rennes
 - Profile LinkedIn : https://www.linkedin.com/in/qcaron/
 - Présentation : Développer un site ou solution métier web avec Django : introduction
@@ -19,12 +25,27 @@
 # Installer le projet
 
 - installer poetry dans votre Python 3.12 : `python3 -m pip install poetry`
-- installer poetry depuis la racine du projet : `python3 -m poetry install --with dev`
+- créer l'environnement virtuel depuis la racine du projet : `python3 -m poetry install [--with dev]`
+
+## Hooks `pre-commit`
+Installez l'environnement virtuel avec l'option `--with dev` pour travailler facilement sur le projet en local.
+Les dépendances telles que `pre-commit` et `pylint` seront ainsi installés et votre code sera vérifié à chaque commit.
+
+Pour installer les hooks chez vous, vous devez exécuter la commande suivante : `poetry run pre-commit install`. Pour
+en savoir plus, allez voir le fichier `.pre-commit-config` à la racine du projet et rendez-vous sur
+[pre-commit.com](https://pre-commit.com/).
 
 # Exécuter le projet
 
 - à la récupération du projet, faire passer les migrations pour configurer la BDD : `poetry run python manage.py migrate`
 - démarrer le serveur Django pour servir la web app en local : `poetry run python manage.py runserver`
+
+# Pages disponibles
+- accueil : http://localhost:8000/
+   - liste des bicyclettes enregistrées avec un lien vers leur page de détail
+   - bouton redirigeant vers la page / formulaire de création d'une bicyclette
+- création de bicyclette : http://localhost:8000/bicyclettes/creer/
+- détail d'une bicyclette : http://localhost:8000/bicyclettes/detail/<str:identifiant_unique>
 
 # Plan de la présentation
 
