@@ -1,0 +1,23 @@
+{% extends "main/__base.html" %}
+
+{% block titre %}Accueil{% endblock titre  %}
+{% block contenu_page %}
+    <section id="actions" class="mt-5">
+        <h3>Actions</h3>
+        <a href="{% url "bicyclettes:creer" %}" class="btn btn-primary">➕ Enregistrer une nouvelle bicyclette </a>
+    </section>
+
+    <section id="liste-bicyclettes" class="mt-5">
+        <h3>Liste des bicyclettes</h3>
+        <ol>
+            {% for bicyclette in bicyclettes %}
+                <li>
+                    <a href="{% url "bicyclettes:detail" bicyclette.identifiant_unique %}">
+                        <span class="lead">{{ bicyclette.identifiant_unique }}</span>
+                        <span class="text-secondary">{{ bicyclette.marque_et_modele }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ol>
+    </section>
+{% endblock contenu_page %}

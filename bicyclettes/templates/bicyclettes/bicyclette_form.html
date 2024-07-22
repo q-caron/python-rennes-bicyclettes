@@ -1,0 +1,12 @@
+{% extends "main/__base.html" %}
+
+{% load crispy_forms_filters %}
+
+{% block titre %}Créer une bicyclette{% endblock titre  %}
+{% block contenu_page %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-success" type="submit" value="Enregistrer">
+    </form>
+{% endblock contenu_page %}

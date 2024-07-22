@@ -1,0 +1,13 @@
+{% extends "main/__base.html" %}
+
+{% block titre %}
+    Information sur la bicyclette
+    <span class="text-primary">{{ bicyclette.identifiant_unique }}</span>
+{% endblock titre  %}
+{% block contenu_page %}
+    <ul>
+        <li>Marque et modèle : {{ bicyclette.marque_et_modele }}</li>
+        <li>Assitance électrique : {{ bicyclette.a_une_assistance_electrique|yesno:"oui,non" }}</li>
+        <li>Système de freinage : {{ bicyclette.get_systeme_de_freinage_display }}</li>
+    </ul>
+{% endblock contenu_page %}
