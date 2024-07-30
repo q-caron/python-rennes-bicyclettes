@@ -1,4 +1,4 @@
-"""URLs pour le projet"""
+"""URLs pour le projet : c'est ici qu'on inclut les URLs des apps"""
 
 from django.contrib import admin
 from django.urls import include, path

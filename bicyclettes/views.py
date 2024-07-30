@@ -18,5 +18,5 @@ class BicycletteDetailView(DetailView):
 
     model = Bicyclette
     context_object_name = "bicyclette"
-    slug_field = "identifiant_unique"
-    slug_url_kwarg = "identifiant_unique"
+    slug_field = "identifiant_unique"  # le champ qui permet d'identifier une bicyclette particulière
+    slug_url_kwarg = "identifiant_unique"  # le nom du mot-clé utilisé dans l'URL pour avoir la valeur du `slug_field`

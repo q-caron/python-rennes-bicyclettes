@@ -9,7 +9,7 @@ from .models import Bicyclette
 class BicycletteAdmin(admin.ModelAdmin):
     """Admin pour Bicyclette"""
 
-    list_display = (
+    list_display = (  # Seules ces colonnes seront affichées sur la page listant les bicyclettes
         "identifiant_unique",
         "a_une_assistance_electrique",
     )

@@ -12,7 +12,7 @@ class BicycletteForm(forms.ModelForm):
         """Définition du modèle Django et champs à utiliser"""
 
         model = Bicyclette
-        fields = (
+        fields = (  # Seuls ces champs feront partie du formulaire
             "marque_et_modele",
             "identifiant_unique",
             "a_une_assistance_electrique",

@@ -10,7 +10,7 @@ class Bicyclette(models.Model):
     un objet à deux roues et disposant d'une selle qui permet de se déplacer en pédalant.
 
     Fonctionne à l'énergie musculaire et peut disposer d'une assistance électrique.
-    Une bicyclette est identifiée par un numéro unique.
+    Une bicyclette est identifiée par un numéro unique au fichier national.
     Possède un système de freinage qui permet de ralentir sa course, voire de la stopper.
     """
 
